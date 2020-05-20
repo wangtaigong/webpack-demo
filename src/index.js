@@ -1,14 +1,10 @@
-import { cube} from './math.js'
+import _ from 'lodash'
 
 function component() {
-  let element = document.createElement('pre');
+  let element = document.createElement('div')
 
-  element.innerHTML = [
-    'Hello Webpack',
-    '5 cubed is equare to ' + cube(5)
-  ].join('\n\n')
-
-  return element;
+  element.innerHTML = _.join(['Hello', 'webpack'], ' ')
+  return element
 }
 
-document.body.appendChild(component());
+document.body.appendChild(component())
